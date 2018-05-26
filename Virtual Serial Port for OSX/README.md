@@ -1,6 +1,6 @@
 # README #
 
-## Please note this is a work in progress. Not everything is working.##
+## Please note this is a work in progress. Not everything is working.
 
 This is a partially working example of a virtual serial port for OSX. While it is possible to create virtual serial ports using the 'socat' utility, the ports created are not recognised by most serial terminal software as they don't appear in the IORegistry and don't have a name such as /dev/cu.xxx or /dev/tty.xxx. This project instead makes a proper serial driver kernel extension. It will eventually enable software such as an an emulated hardware device with a serial port (DCE) to communicate with a standard serial tool (DTE) such as the terminal.
 
@@ -12,15 +12,13 @@ A user client (VSPUserClient) for communicating with the app (eg. emulated hardw
 
 A tester app that acts as a 'very' basic hardware device that communicates with the VirtualSerialPort through the VSPUserClient.
 
-#### The project enables a setup like so:####
+#### The project enables a setup like so:
 
 Terminal or serial app <----> /dev/tty.VirtualSerialPort <--> VirtualSerialPort <--> VSPUserClient <----> emulated hardware etc.
 
 ### How do I get set up? ###
 
 The project comes with usage instructions and an important READ FIRST document. The project was built for OSX 10.11 but would probably work on slightly older systems.
-
-You can download a zip file of the whole project from [the downloads page](https://bitbucket.org/peterzegelin/virtual-serial-port/downloads?tab=downloads).
 
 ### Project Status ###
 
