@@ -1,0 +1,48 @@
+
+WARNING: - This project creates a kernel extension - kext - that MAY crash your computer unless
+you are a bit careful. Maybe even then. IT IS A WORK IN PROGRESS. It hasn't crashed for me for
+a while though.
+
+This is a semi working example of a virtual serial port for OSX. See Usage.txt for how to
+experiment with it. See To Do.txt for what is working and what still needs to be done. The code
+in VirtualSerialPort.cpp is based on code by:
+
+Hiroki Mori. https://sourceforge.net/p/ubsa-osx/svn/13/tree/FTDIDriver/  (BSD License).
+
+IMPORTANT:
+
+1. Current operating systems won't let you load kexts that are not signed unless you remove
+    the System Integrity Protection. See Usage.txt for further details
+
+2. This project is not fully working. The VirtualSerialPort can send data from the VSPTester
+    (DCE) to a connected Serial Tool (DTE). However it can't yet send data in the opposite
+    direction.
+
+
+WHAT IS THIS?:
+
+A project to enable an emulated hardware device with a serial port (DCE) to communicate with a
+standard serial tool (DTE) such as the terminal. The project has three components:
+
+A kernel extension - kext - that creates a virtual serial port (VirtualSerialPort) that will
+appear as a serial device in /dev and will be found by standard searches using IOServiceMatching
+and IOServiceGetMatchingServices. The kext also has a user client (VSPUserClient) for
+communicating with a app (eg. emulated hardware) that wants a serial port to show up in /dev.
+
+A tester app that acts as a 'very' basic hardware device. The tester app communicates with the
+VirtualSerialPort through a VSPUserClient that also resides in the kernel. Note that the tester
+does not load the kext automatically, whereas a real app probably would.
+
+So:
+                                                                           Serial Tool (DTE)
+                                                                                  |
+                   VSPTester (DCE)                                     /dev/tty.VirtualSerialPort
+                         |                                                        |
+————————————————————————————————————————— kernel / user ———————————————————————————————————
+                         |                                                        |
+                   VSPUserClient                                                  |
+                         |                                                        |
+IOResource ------ VirtualSerialPort ------ IORS232SerialStreamSync ------ IOSerialBSDClient
+ (system)                |                        (system)                     (system)
+                 IOSerialDriverSync
+                (superClass -system)

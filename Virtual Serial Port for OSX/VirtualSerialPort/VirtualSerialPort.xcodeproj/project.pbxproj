@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1019081E1D5822C50038BBD5 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1019081D1D5822C50038BBD5 /* IOKit.framework */; };
+		10637BCE1D5C70E600113B31 /* SccQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10637BCC1D5C70E600113B31 /* SccQueue.cpp */; };
+		10637BCF1D5C70E600113B31 /* SccQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 10637BCD1D5C70E600113B31 /* SccQueue.h */; };
+		10A3DD731D52160B002A5E76 /* VirtualSerialPort.h in Headers */ = {isa = PBXBuildFile; fileRef = 10A3DD721D52160B002A5E76 /* VirtualSerialPort.h */; };
+		10A3DD751D52160B002A5E76 /* VirtualSerialPort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10A3DD741D52160B002A5E76 /* VirtualSerialPort.cpp */; };
+		10A594711D6B172300F3649D /* VSPUserClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10A5946F1D6B172300F3649D /* VSPUserClient.cpp */; };
+		10A594721D6B172300F3649D /* VSPUserClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 10A594701D6B172300F3649D /* VSPUserClient.h */; };
+		10E7A3E31D68F1F100500AD7 /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = 10E7A3E21D68F1F100500AD7 /* Shared.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1019081D1D5822C50038BBD5 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		10637BCC1D5C70E600113B31 /* SccQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SccQueue.cpp; sourceTree = "<group>"; };
+		10637BCD1D5C70E600113B31 /* SccQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SccQueue.h; sourceTree = "<group>"; };
+		10A3DD6F1D52160B002A5E76 /* VirtualSerialPort.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VirtualSerialPort.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		10A3DD721D52160B002A5E76 /* VirtualSerialPort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirtualSerialPort.h; sourceTree = "<group>"; };
+		10A3DD741D52160B002A5E76 /* VirtualSerialPort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VirtualSerialPort.cpp; sourceTree = "<group>"; };
+		10A3DD761D52160B002A5E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10A5946E1D6AE11300F3649D /* To Do and Done.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = "To Do and Done.txt"; path = "../To Do and Done.txt"; sourceTree = "<group>"; };
+		10A5946F1D6B172300F3649D /* VSPUserClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VSPUserClient.cpp; sourceTree = "<group>"; };
+		10A594701D6B172300F3649D /* VSPUserClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSPUserClient.h; sourceTree = "<group>"; };
+		10E7A3E21D68F1F100500AD7 /* Shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shared.h; path = ../Shared.h; sourceTree = "<group>"; };
+		10F214D51D6962C4002B204D /* READ FIRST.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = "READ FIRST.txt"; path = "../READ FIRST.txt"; sourceTree = "<group>"; };
+		10F214D71D696ACA002B204D /* InstallVirtualSerialPort.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = InstallVirtualSerialPort.sh; path = ../InstallVirtualSerialPort.sh; sourceTree = "<group>"; };
+		10F214D81D6982B0002B204D /* Usage.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = Usage.txt; path = ../Usage.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10A3DD6B1D52160B002A5E76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1019081E1D5822C50038BBD5 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10A3DD651D52160B002A5E76 = {
+			isa = PBXGroup;
+			children = (
+				10F214D51D6962C4002B204D /* READ FIRST.txt */,
+				10F214D81D6982B0002B204D /* Usage.txt */,
+				10A5946E1D6AE11300F3649D /* To Do and Done.txt */,
+				10F214D71D696ACA002B204D /* InstallVirtualSerialPort.sh */,
+				10E7A3E21D68F1F100500AD7 /* Shared.h */,
+				10A3DD711D52160B002A5E76 /* VirtualSerialPort */,
+				1019081D1D5822C50038BBD5 /* IOKit.framework */,
+				10A3DD701D52160B002A5E76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		10A3DD701D52160B002A5E76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10A3DD6F1D52160B002A5E76 /* VirtualSerialPort.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		10A3DD711D52160B002A5E76 /* VirtualSerialPort */ = {
+			isa = PBXGroup;
+			children = (
+				10A594701D6B172300F3649D /* VSPUserClient.h */,
+				10A5946F1D6B172300F3649D /* VSPUserClient.cpp */,
+				10637BCD1D5C70E600113B31 /* SccQueue.h */,
+				10637BCC1D5C70E600113B31 /* SccQueue.cpp */,
+				10A3DD721D52160B002A5E76 /* VirtualSerialPort.h */,
+				10A3DD741D52160B002A5E76 /* VirtualSerialPort.cpp */,
+				10A3DD761D52160B002A5E76 /* Info.plist */,
+			);
+			path = VirtualSerialPort;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		10A3DD6C1D52160B002A5E76 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10A594721D6B172300F3649D /* VSPUserClient.h in Headers */,
+				10E7A3E31D68F1F100500AD7 /* Shared.h in Headers */,
+				10637BCF1D5C70E600113B31 /* SccQueue.h in Headers */,
+				10A3DD731D52160B002A5E76 /* VirtualSerialPort.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		10A3DD6E1D52160B002A5E76 /* VirtualSerialPort */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10A3DD791D52160B002A5E76 /* Build configuration list for PBXNativeTarget "VirtualSerialPort" */;
+			buildPhases = (
+				10A3DD6A1D52160B002A5E76 /* Sources */,
+				10A3DD6B1D52160B002A5E76 /* Frameworks */,
+				10A3DD6C1D52160B002A5E76 /* Headers */,
+				10A3DD6D1D52160B002A5E76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VirtualSerialPort;
+			productName = VirtualSerialPort;
+			productReference = 10A3DD6F1D52160B002A5E76 /* VirtualSerialPort.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10A3DD661D52160B002A5E76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = FracturedSoftware;
+				TargetAttributes = {
+					10A3DD6E1D52160B002A5E76 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 10A3DD691D52160B002A5E76 /* Build configuration list for PBXProject "VirtualSerialPort" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 10A3DD651D52160B002A5E76;
+			productRefGroup = 10A3DD701D52160B002A5E76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10A3DD6E1D52160B002A5E76 /* VirtualSerialPort */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10A3DD6D1D52160B002A5E76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10A3DD6A1D52160B002A5E76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10A3DD751D52160B002A5E76 /* VirtualSerialPort.cpp in Sources */,
+				10A594711D6B172300F3649D /* VSPUserClient.cpp in Sources */,
+				10637BCE1D5C70E600113B31 /* SccQueue.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		10A3DD771D52160B002A5E76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		10A3DD781D52160B002A5E76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		10A3DD7A1D52160B002A5E76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				INFOPLIST_FILE = VirtualSerialPort/Info.plist;
+				MODULE_NAME = com.fracturedsoftware.VirtualSerialPort;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fracturedsoftware.VirtualSerialPort;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		10A3DD7B1D52160B002A5E76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				INFOPLIST_FILE = VirtualSerialPort/Info.plist;
+				MODULE_NAME = com.fracturedsoftware.VirtualSerialPort;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fracturedsoftware.VirtualSerialPort;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10A3DD691D52160B002A5E76 /* Build configuration list for PBXProject "VirtualSerialPort" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10A3DD771D52160B002A5E76 /* Debug */,
+				10A3DD781D52160B002A5E76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10A3DD791D52160B002A5E76 /* Build configuration list for PBXNativeTarget "VirtualSerialPort" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10A3DD7A1D52160B002A5E76 /* Debug */,
+				10A3DD7B1D52160B002A5E76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10A3DD661D52160B002A5E76 /* Project object */;
+}

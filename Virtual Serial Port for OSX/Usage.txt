@@ -1,0 +1,87 @@
+
+WARNING - This kext MAY crash your computer unless you are a bit careful. Maybe even then.
+************************  IT IS A WORK IN PROGRESS  *************************************
+
+In order to use the kext you must do the following:
+
+1. Remove System Integrity Protection
+2. Build and load kernel extension
+3. Build and run VSPTester (DCE)
+4. Open up a Serial Tool or terminal (DTE)
+4. Open up a connection to the kext with the DTE. It should appear as 'VirtualSerialPort'
+
+After connecting, info about the connection will appear in the VSPTester window. You can send
+data from the VSPTester and it will appear at the DTE. Unfortunately it doesn't yet work in the
+other direction.
+
+
+**** Remove System Integrity Protection *******************
+
+To load an unsigned kext into a modern version of OSX you will have to remove the S.I.P
+This varies with the operating system but for El Capitan:
+
+// To check if enabled or disabled via terminal
+$ csrutil status
+
+// To enable or disable:
+Click the  menu and select Restart...
+Hold down command-R to boot into the Recovery System.
+Click the Utilities menu and select Terminal.
+Type csrutil disable or enable and press return.
+Close the Terminal app.
+Click the  menu and select Restart....
+
+
+**** Load the kext ****************************************
+
+Build this project, find VirtualSerialPort.kext product and move it to the desktop.
+You can find the built kext by control-clicking on the built product and selecting
+'Show in Finder'. Then, using the terminal (you will be asked for your password):
+
+$ cd to your desktop
+$ sudo cp -R VirtualSerialPort.kext /tmp - this is an easy way to set permissions
+$ chown -R root:wheel /tmp/VirtualSerialPort.kext
+$ sudo kextload /tmp/VirtualSerialPort.kext
+
+There is an InstallVirtualSerialPort.sh script that does the above. To run it:
+move script to desktop.
+
+$ cd to your desktop
+$ sh InstallVirtualSerialPort.sh
+
+
+To Unload the driver:
+$ sudo kextunload -b com.fracturedsoftware.VirtualSerialPort
+
+To show all kexts:
+$ kextstat
+
+To show the endpoint
+$ ls /dev/tty.*
+
+The serial port should show up as cu.VirtualSerialPort and tty.VirtualSerialPort
+
+
+**** Run VSPTester ***************************************
+
+The included VSPTester app will open up a communication channel with the VirtualSerialPort via
+the VSPUserClient. It will then show details of the Serial port settings as they change.
+You can send some data from the tester to your DTE when it is connected. Unfortunately sending
+data from the DTE to VSPTester doesn't work yet.
+
+
+**** Open up a Serial Tool and connect to kext ************
+
+You can use something like Serial Tools: http://www.w7ay.net/site/Applications/Serial%20Tools/Contents/download.html
+or with the terminal:
+
+> screen  /dev/tty.VirtualSerialPort 115200
+
+If you are using the terminal disconnect by typing control-a followed by control-\.
+
+
+
+
+
+
+

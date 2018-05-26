@@ -1,0 +1,14 @@
+
+This is very much a work in progress but very nearly 'working' for at least simple cases. If you follow
+the Usage.txt instructions you should be able to send simple messages to your terminal from the VSPTester.
+
+The main remaining problem is to figure out why text can't be sent the other way, say from the terminal
+to the VSPTester. It may be a flow control problem or something else completely. Unfortunately, I am not
+familiar enough with the details of serial port communication to figure out what is preventing data
+flowing to the port. Whatever it is, VirtualSerialPort::enqueueData is never called. What does happen
+though is each time a key is pressed a setState (TX_EVENT) is sent. This and other events can be seen by
+opening the console as I have enabled logging for most methods.
+
+The other bit that appears to work but may not be working correctly is that VirtualSerialPort::dequeueData
+is called continuously - hundreds of times per second. I am not sure if this is correct or some state bit is
+set incorrectly, causing dequeueData to be called all the time. I have switched off DEBUG_IOLOG for this method.
